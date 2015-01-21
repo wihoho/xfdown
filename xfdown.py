@@ -21,7 +21,7 @@ if '__main__'==__name__:
         fileName = result[2]
         ftn5k = s.filecom[index]
         fileHttp = s.filehttp[index]
-        aria2Command = "aria2c -c -s10 -x10 -d /Users/GongLi/Downloads   -o '" +fileName+ "' --header 'Cookie: FTN5K=" +ftn5k+ "' " +fileHttp
+        aria2Command = "aria2c -c -s10 -x10 -d /var/www/owncloud/data/wihoho/files -o '" +fileName+ "' --header 'Cookie: FTN5K=" +ftn5k+ "' " +fileHttp
         print aria2Command
         potentialFileCommands.append(aria2Command)
 
