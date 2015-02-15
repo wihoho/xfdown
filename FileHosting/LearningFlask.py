@@ -4,7 +4,7 @@ from FileWrapper import FileWrapper
 
 app = Flask(__name__)
 
-targetFolder = '/Users/GongLi/Github/xfdown/FileHosting/static'
+targetFolder = '/Users/GongLi/Downloads'
 
 
 @app.route('/hello')
@@ -17,7 +17,7 @@ def list():
     allFiles = os.listdir( targetFolder )
     allFileWrapper = [FileWrapper(address, '/download/' + address) for address in allFiles]
 
-    return render_template('hello.html', files=allFileWrapper)
+    return allFileWrapper
 
 
 @app.route('/download/<path:filename>')
