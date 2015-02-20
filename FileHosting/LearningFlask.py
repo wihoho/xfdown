@@ -17,7 +17,7 @@ def list():
     allFiles = os.listdir( targetFolder )
     allFileWrapper = [FileWrapper(address, '/download/' + address) for address in allFiles]
 
-    return allFileWrapper
+    return render_template('hello.html', files=allFileWrapper)
 
 
 @app.route('/download/<path:filename>')
